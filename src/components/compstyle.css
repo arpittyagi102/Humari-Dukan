@@ -1,0 +1,21 @@
+.container{
+    border-style: solid;
+    border-color: grey;
+    height: 100px;
+    width: 300px;
+    margin:50px;
+    display: flex;
+}
+
+.image{
+    height:100px;
+    width:100px;
+}
+
+.inner{
+
+}
+
+h3,p{
+    margin-left:20px;
+}
