@@ -1,0 +1,74 @@
+body{
+    margin:0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.uppernav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+.logo{
+    height: 60px;
+    width:60px;
+    border:solid 2px;
+    border-radius: 100%;
+    margin:auto 20px;
+}
+.logo-and-title{
+    display: flex;
+}
+.searchbar{
+    height: 45px;
+    width: 40%;
+    border-radius: 100px;
+    background-color: rgb(197, 197, 197);
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    display: flex;
+    overflow: hidden;
+}
+.search-icon{
+    height: 75%;
+    margin-left:8px;
+    opacity: 50%;
+}
+.search-input{
+    background: transparent;
+    border: none;
+    height: inherit;
+    font-size: 20px;
+    margin-left:5px;
+    width:70%;
+}
+.search-input::placeholder{
+    text-align: center;
+}
+.search-input:focus{
+    outline: none;
+}
+.search-button{
+    height: inherit;
+    width: 150px;
+    color:white;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    background-image: linear-gradient(to right,orange,red);
+}
+.bag-icon{
+    height: inherit;
+}
+.lowernav{
+    display: flex;
+    background-color: rgb(6, 186, 203);
+    gap: 30px;
+    justify-content: center;
+}
+.lowernav div{
+    font-size: 20px;
+    margin: 5px;
+    color:white;
+}
