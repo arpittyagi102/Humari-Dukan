@@ -1,10 +1,10 @@
 import React from "react";
-import "./compstyle.css";
+import "./product.css";
 
 export default function Kuchbhi(props) {
     return (
         <div className="container">
-            <img className="image" src={props.image} alt="Image not loadingw" />
+            <img className="image" src={props.image} alt="not loading" />
             <div className="inner">
                 <h3>{props.title}</h3>
                 <p>cost:{props.cost}</p>
