@@ -1,7 +1,7 @@
 import React from "react";
 import "./product.css";
 
-export default function Kuchbhi(props) {
+export default function Product(props) {
     return (
         <div className="container">
             <img className="image" src={props.image} alt="not loading" />
