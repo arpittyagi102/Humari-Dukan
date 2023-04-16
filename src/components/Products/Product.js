@@ -5,11 +5,17 @@ export default function Product(props) {
     return (
         <div className="container">
             <img className="image" src={props.image} alt="not loading" />
-            <div className="inner">
-                <h3>{props.title}</h3>
-                <p>cost:{props.cost}</p>
-                <button style={{ marginRight: "10px" }}>Add to cart</button>
-            </div>
+      
+                <h3 style={{ marginTop: "0px" }}>{props.title}</h3>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                    <p>${props.cost}</p>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/slkvcfos.json"
+                        trigger="click"
+                        style={{ border: "solid green", borderRadius: "20px", height: "40px", width: "40px" }}
+                    >
+                    </lord-icon></div>
+        
         </div>
     )
 }

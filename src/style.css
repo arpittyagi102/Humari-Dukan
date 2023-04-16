@@ -1,7 +1,7 @@
-.container{
-    border-style: solid;
-    border-color: grey;
-    height: 100px;
-    width: 300px;
-    margin:50px;
+.product-outer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-evenly;
 }

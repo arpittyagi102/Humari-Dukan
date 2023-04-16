@@ -17,6 +17,7 @@ body{
 }
 .logo-and-title{
     display: flex;
+    align-items: center;
 }
 .searchbar{
     height: 45px;
@@ -71,4 +72,11 @@ body{
     font-size: 20px;
     margin: 5px;
     color:white;
+}
+.heading,.cart-button{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: large;
+
 }

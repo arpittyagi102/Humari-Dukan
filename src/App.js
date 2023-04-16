@@ -1,22 +1,18 @@
 import React from "react";
-import Productdata from './components/Products/productdata';
-import Product from './components/Products/Product'
 import "./style.css"
 import Navbar from "./components/Navbar/Navbar";
+import Allproducts from "./components/Products/Allproducts";
+import Cart from "./components/Cart/Cart";
+import { Routes,Route } from "react-router-dom";
 
 export default function App() {
   return (
     <>
       <Navbar />
-      <div>
-      {   Productdata.map((product)=>(
-            <Product
-              title={product.title}
-              image={product.image}
-              cost={product.price}
-              />
-          ))}
-      </div>
+      <Routes>
+      <Route path="/" element={<Allproducts/>}/>
+      <Route path="/cart" element={<Cart/>}/>
+      </Routes>
     </>
   );
 }
