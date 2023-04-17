@@ -1,12 +1,15 @@
 import React from "react";
 import "./product.css";
 import { useDispatch } from "react-redux";
-import {addtocart} from '../../Store/action.js'
+import {addtocart,removefromcart} from '../../Store/action.js'
 
 export default function Product(props) {
     const dispatch=useDispatch();
     function handleonClick(){
-        dispatch(addtocart(props))
+        if(props.type === "add")
+            dispatch(addtocart(props));
+        else if(props.type === "remove");
+            dispatch(removefromcart(props));
         //console.log(props);
     }
 

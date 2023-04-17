@@ -11,6 +11,7 @@ export default function Allproducts() {
               title={product.title}
               image={product.image}
               cost={product.price}
+              type={"add"}
               />
           ))}
       </div>

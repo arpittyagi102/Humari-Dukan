@@ -11,8 +11,6 @@ body{
 .logo{
     height: 60px;
     width:60px;
-    border:solid 2px;
-    border-radius: 100%;
     margin:auto 20px;
 }
 .logo-and-title{

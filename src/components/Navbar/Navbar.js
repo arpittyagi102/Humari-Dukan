@@ -2,13 +2,14 @@ import React from "react";
 import './navbar.css';
 import searchicon from './search-icon.png';
 import { Link } from "react-router-dom";
+import logo from "./logo.png"
 
 export default function Navbar() {
     return (
         <>
             <div className="uppernav">
                 <div className="logo-and-title">
-                    <div className="logo"></div>
+                    <img src={logo} alt={"Logo"} className="logo"/>
                     <Link to='/' className="heading">Humari Dukan</Link>
                 </div>
                 <div className="searchbar">

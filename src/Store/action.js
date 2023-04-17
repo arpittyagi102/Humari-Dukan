@@ -16,4 +16,4 @@ const removefromcart = (data) => {
     }
 }
 
-export {addtocart};
+export {addtocart,removefromcart};

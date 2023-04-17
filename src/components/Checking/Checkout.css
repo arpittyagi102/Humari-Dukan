@@ -1,0 +1,8 @@
+.header-banner{
+    background-color: rgb(51, 51, 51);
+    height:200px;
+}
+.banner{
+    object-fit: contain;
+    height:200px;
+}

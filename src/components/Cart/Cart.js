@@ -4,17 +4,19 @@ import { useSelector } from "react-redux";
 
 export default function Cart(){
     const data= useSelector(state => state);
-    console.log(data);
+    //console.log(data);
     // console.log(data.title);
     return(
         <>
+            <div className="product-outer">
         {   data.map((product)=>(
             <Product
               title={product.title}
               image={product.image}
               cost={product.cost}
+              type="remove"
               />
-          ))}
+          ))}</div>
         </>
     )
 }
