@@ -1,7 +1,15 @@
 import React from "react";
 import "./product.css";
+import { useDispatch } from "react-redux";
+import {addtocart} from '../../Store/action.js'
 
 export default function Product(props) {
+    const dispatch=useDispatch();
+    function handleonClick(){
+        dispatch(addtocart(props))
+        //console.log(props);
+    }
+
     return (
         <div className="container">
             <img className="image" src={props.image} alt="not loading" />
@@ -13,6 +21,7 @@ export default function Product(props) {
                         src="https://cdn.lordicon.com/slkvcfos.json"
                         trigger="click"
                         style={{ border: "solid green", borderRadius: "20px", height: "40px", width: "40px" }}
+                        onClick={handleonClick}
                     >
                     </lord-icon></div>
         
