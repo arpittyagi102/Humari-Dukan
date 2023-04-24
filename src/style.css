@@ -1,3 +1,25 @@
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.active{
+    font-weight: bold;
+}
+
+
+
+.breadcrumb li{
+    color:rgb(128, 128, 211);
+}
+.active ~ li{
+    color:white
+}
+*{
+    --bs-breadcrumb-divider: '>';
+    --bs-breadcrumb-item-active-color:rgb(128, 128, 211);
+}
+
 .product-outer{
     display: flex;
     width: 100%;
@@ -5,3 +27,4 @@
     align-content: space-evenly;
     justify-content: space-evenly;
 }
+

@@ -21,7 +21,7 @@ export default function Product(props) {
             <h4 className="m-2 mb-3">{props.title}</h4>
             <div className="mt-auto mb-3 d-flex justify-content-evenly">
                 <p className="btn btn-success mx-2 bottom-0 p-2 rounded-4 text-black d-inline">${props.cost}</p>
-                <p className="btn btn-outline-warning rounded-4 p-2">Add to cart</p>
+                <p className="btn btn-outline-warning rounded-4 p-2" onClick={handleonClick}>Add to cart</p>
             </div>
 
         </div>
