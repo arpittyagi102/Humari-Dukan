@@ -5,7 +5,8 @@ import Product from './Product'
 export default function Allproducts() {
   return (
     <>
-      <div className="product-outer">
+    <div className="container">
+      <div className="product-outr d-flex flex-wrap justify-content-center">
       {   Productdata.map((product)=>(
             <Product
               title={product.title}
@@ -14,6 +15,7 @@ export default function Allproducts() {
               type={"add"}
               />
           ))}
+      </div>
       </div>
     </>
   );
