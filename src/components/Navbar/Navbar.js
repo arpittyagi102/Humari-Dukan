@@ -10,7 +10,7 @@ export default function Navbar() {
             <div className="uppernav">
                 <div className="logo-and-title">
                     <img src={logo} alt={"Logo"} className="logo"/>
-                    <Link to='/' className="heading">HUMARI DUKAN</Link>
+                    <Link to='/' className="heading">Humari dukaan</Link>
                 </div>
                 <div className="searchbar">
                     <img src={searchicon} alt="search-icon" className="search-icon" />
