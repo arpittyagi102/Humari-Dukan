@@ -14,13 +14,14 @@ export default function Product(props) {
     }
 
     return (
-        <div className="m-4 border rounded-4 shadow d-flex flex-column" style={{width:"200px",overflow:"hidden"}}>
-            <div className="bg-white w-100 align-items-center justify-content-center d-flex" >
-                <img className=" d-block m-3" src={props.image} alt="not loading" style={{height:"200px"}}/>
+        <div className=" m-4 border rounded-4 shadow-lg d-flex flex-column hover-shadow" style={{width:"200px",overflow:"hidden"}}>
+            <div className="bg-white w-100 align-items-center h-50 justify-content-center d-flex object-fit-contain" >
+                <img className=" d-block m-3 object-fit-contain" src={props.image} alt="not loading" style={{maxHeight:"200px",maxWidth:"190px"}}/>
             </div>
             <h4 className="m-2 mb-3">{props.title}</h4>
-            <div className="mt-auto mb-3 d-inline">
-                <p className="m-3 bottom-0 bg-warning p-2 rounded-4 text-black d-inline">${props.cost}</p>
+            <div className="mt-auto mb-3 d-flex justify-content-evenly">
+                <p className="btn btn-success mx-2 bottom-0 p-2 rounded-4 text-black d-inline">${props.cost}</p>
+                <p className="btn btn-outline-warning rounded-4 p-2">Add to cart</p>
             </div>
 
         </div>
