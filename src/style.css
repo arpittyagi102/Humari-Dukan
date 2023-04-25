@@ -16,8 +16,12 @@ a{
     color:white
 }
 *{
-    --bs-breadcrumb-divider: '>';
+    --bs-breadcrumb-divider: '------';
     --bs-breadcrumb-item-active-color:rgb(128, 128, 211);
+}
+
+form input,form select{
+    height: 50px;
 }
 
 .product-outer{

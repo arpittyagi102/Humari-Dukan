@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Info() {
+export default function Info({email,emailchange,number,numberchange}) {
     return (
         <>
             <div className="container w-75">
@@ -15,7 +15,7 @@ export default function Info() {
                 </nav>
                 <form>
                     <h4>Contact</h4>
-                    <input type="email" className="form-control mt-3 mb-1" placeholder="Email" />
+                    <input type="email" className="form-control mt-3 mb-1" placeholder="Email" onChange={emailchange} />
                     <input type="checkbox" class="form-check-input mt-2 me-1" id="exampleCheck1" /> get order updates
                     <h4 className="mt-4 mb-3">Shipping Address</h4>
                     <select class="form-select">
@@ -34,7 +34,12 @@ export default function Info() {
                         <input className="form-control" placeholder="State" />
                         <input className="form-control" placeholder="Pin Code" />
                     </div>
+                    <input className="form-control mt-3 mb-4" placeholder="Phone Number for order updates" onChange={numberchange} />
                 </form>
+                <div className="d-flex text-primary text-lg m-3 mt-5 align-items-center justify-content-between">
+                    <Link to="/cart"><div className="btn btn-outline-primary p-3">{"<"} Return to Cart</div></Link>
+                    <Link to="/checkout/shipping"><div className="btn btn-primary p-3">Continue to Shipping</div></Link>
+                </div>
             </div>
         </>
     )

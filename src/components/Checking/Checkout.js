@@ -14,11 +14,11 @@ export default function Checkout() {
     }
     return (
         <>
-            <div className="d-flex" style={{ alignItems: "stretch", height: "90vh" }} >
-                <div className="w-60 m-5" style={{ width: "60%" }}>
+            <div className="d-flex" style={{ alignItems: "stretch",minHeight:"90vh" }} >
+                <div className="w-75 container m-5" style={{ width: "60%" }}>
                     <Outlet />
                 </div>
-                <div className="w-40 bg-primary p-5 " data-bs-theme="light" style={{ width: "40%" }}>
+                <div className="w-40 bg-primary p-5" data-bs-theme="light" style={{ width: "40%" }}>
                     <div style={{ maxHeight: "400px",overflow:"hidden" }}>
                         {data.map((product) => (
                             <Product2
