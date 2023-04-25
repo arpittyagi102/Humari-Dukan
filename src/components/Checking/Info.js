@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Info({email,emailchange,number,numberchange}) {
+export default function Info({emailchange,numberchange}) {
     return (
         <>
             <div className="container w-75">
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item" ><Link to="one">Cart</Link></li>
-                        <li className="breadcrumb-item active" aria-current="page"><Link to="info">Information</Link></li>
+                        <li className="breadcrumb-item" ><Link to="/cart">Cart</Link></li>
+                        <li className="breadcrumb-item active" aria-current="page"><Link to="/checkout/info">Information</Link></li>
                         <li className="breadcrumb-item"><Link to="/checkout/shipping">Shipping</Link></li>
-                        <li className="breadcrumb-item" ><Link to="payment">Payment</Link></li>
+                        <li className="breadcrumb-item" ><Link to="/checkout/payment">Payment</Link></li>
                     </ol>
                 </nav>
                 <form>

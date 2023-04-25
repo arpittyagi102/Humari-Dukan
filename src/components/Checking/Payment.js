@@ -7,10 +7,10 @@ export default function Payment({email,number}) {
             <div className="container w-75">
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item" ><Link to="one">Cart</Link></li>
-                        <li className="breadcrumb-item" ><Link to="info">Information</Link></li>
+                        <li className="breadcrumb-item" ><Link to="/cart">Cart</Link></li>
+                        <li className="breadcrumb-item" ><Link to="/checkout/info">Information</Link></li>
                         <li className="breadcrumb-item" ><Link to="/checkout/shipping">Shipping</Link></li>
-                        <li className="breadcrumb-item active" aria-current="page" ><Link to="payment">Payment</Link></li>
+                        <li className="breadcrumb-item active" aria-current="page" ><Link to="/checkout/payment">Payment</Link></li>
                     </ol>
                 </nav>
                 <table className="d-grid border p-3 rounded-4 my-5 mb-4">

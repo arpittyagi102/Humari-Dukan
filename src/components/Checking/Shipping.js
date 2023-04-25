@@ -7,8 +7,8 @@ export default function Shipping({ email, number }) {
             <div className="container w-75">
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item" ><Link to="one">Cart</Link></li>
-                        <li className="breadcrumb-item" ><Link to="info">Information</Link></li>
+                        <li className="breadcrumb-item" ><Link to="/cart">Cart</Link></li>
+                        <li className="breadcrumb-item" ><Link to="/checkout/info">Information</Link></li>
                         <li className="breadcrumb-item active" aria-current="page"><Link to="/checkout/shipping">Shipping</Link></li>
                         <li className="breadcrumb-item" ><Link to="/checkout/payment">Payment</Link></li>
                     </ol>

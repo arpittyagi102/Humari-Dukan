@@ -24,6 +24,10 @@ form input,form select{
     height: 50px;
 }
 
+.search:focus{
+    outline:none
+}
+
 .product-outer{
     display: flex;
     width: 100%;
