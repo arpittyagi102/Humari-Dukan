@@ -10,14 +10,14 @@ a{
 
 
 .breadcrumb li{
-    color:rgb(128, 128, 211);
+    color:#198754;
 }
 .active ~ li{
     color:white
 }
 *{
     --bs-breadcrumb-divider: '------';
-    --bs-breadcrumb-item-active-color:rgb(128, 128, 211);
+    --bs-breadcrumb-item-active-color:#0D55AB;
 }
 
 form input,form select{

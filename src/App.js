@@ -13,6 +13,7 @@ export default function App() {
 
   const [email,setemail]=useState("");
   const [number,setnumber]=useState("");
+  const [search,setsearch]=useState("");
 
   function handleemailchange(event){
     setemail(event.target.value);
@@ -22,17 +23,21 @@ export default function App() {
     setnumber(event.target.value);
   }
 
+  function handlesetsearch(event){
+    setsearch(event.target.value);
+  }
+
   return (
     <>
       <div className="bg">
-        <Navbar />
+        <Navbar handlesetsearch={handlesetsearch}/>
         <Routes>
-          <Route path="/" element={<Allproducts />} />
+          <Route path="/" element={<Allproducts search={search}/>} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} >
-            <Route index path="info" element={<Info email={email} emailchange={handleemailchange} number={number} numberchange={handlenumberchange}/>} />
+            <Route index path="info" element={<Info emailchange={handleemailchange} numberchange={handlenumberchange}/>} />
             <Route path="shipping" element={<Shipping email={email} number={number}/>} />
-            <Route path="payment" element={<Payment/>} />
+            <Route path="payment" element={<Payment email={email} number={number} />} />
           </Route>
         </Routes>
       </div>

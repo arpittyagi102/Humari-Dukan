@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Productdata from './productdata';
 import Product from './Product'
 
-export default function Allproducts() {
+export default function Allproducts({search}) {
+
+  const [filtereddata,updatefiltereddata]=useState(Productdata);
+
+  useEffect(()=>{
+    const NewData = Productdata.filter(product => product.title.toLowerCase().includes(search.toLowerCase()));
+    updatefiltereddata(NewData);
+  },[search])
   return (
     <>
     <div className="container mt-4">
       <div className="product-outr d-flex flex-wrap justify-content-center">
-      {   Productdata.map((product)=>(
+      {   filtereddata.map((product)=>(
             <Product
               title={product.title}
               image={product.image}
