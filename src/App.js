@@ -10,6 +10,7 @@ import Shipping from './components/Checking/Shipping'
 import Payment from './components/Checking/Payment'
 
 export default function App() {
+
   return (
     <>
       <div className="bg">
