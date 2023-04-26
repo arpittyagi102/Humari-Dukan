@@ -8,6 +8,7 @@ const addtocart = (data) => {
 }
 
 const removefromcart = (data) => {
+    console.log(data);
     return (dispatch) => {
         dispatch({
             type: 'removefromcart',

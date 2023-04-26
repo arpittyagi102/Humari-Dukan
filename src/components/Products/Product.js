@@ -1,5 +1,4 @@
 import React from "react";
-import "./product.css";
 import { useDispatch } from "react-redux";
 import { addtocart, removefromcart } from '../../Store/action.js'
 
@@ -9,8 +8,8 @@ export default function Product(props) {
         if (props.type === "add")
             dispatch(addtocart(props));
         else if (props.type === "remove");
-        dispatch(removefromcart(props));
-        //console.log(props);
+            dispatch(removefromcart(props));
+        console.log(props);
     }
 
     return (
@@ -21,7 +20,12 @@ export default function Product(props) {
             <h4 className="m-2 mb-3">{props.title}</h4>
             <div className="mt-auto mb-3 d-flex justify-content-evenly">
                 <p className="btn btn-success mx-2 bottom-0 p-2 rounded-4 text-black d-inline">${props.cost}</p>
-                <p className="btn btn-outline-warning rounded-4 p-2" onClick={handleonClick}>Add to cart</p>
+                {props.type==="add" ? (
+                    <p className="btn btn-outline-warning rounded-4 p-2" onClick={handleonClick}>Add to cart</p>
+                ):(
+                    <p className="btn btn-outline-danger rounded-4 p-2 px-3" onClick={handleonClick}>Remove</p>
+                )}
+
             </div>
 
         </div>

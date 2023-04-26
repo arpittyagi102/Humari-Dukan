@@ -5,15 +5,13 @@ const reducer = (state = initialstate, action) => {
 
     if (action.type === 'addtocart')
         {
-            console.log(action.payload.title + " added to cart")
             return ([...state,action.payload]);
         }
     else if(action.type === 'removefromcart')
     {
-        console.log(action.payload.title + " removed from cart")
-        return ([
-            ...state
-        ])
+        const temp=[...state];
+        temp.splice(action.payload.id,1);
+        return ([...temp])
     }
     else
         return state;

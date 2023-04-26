@@ -12,7 +12,7 @@ export default function Navbar({ handlesetsearch }) {
                     <Link to="/" style={{ textDecoration: "none", color: "white" }}><h3>HUMARI DUKAN</h3></Link>
                 </div>
                 <div className="d-flex align-items-center border-bottom">
-                    <input onChange={handlesetsearch} className=" mx-3 bg-transparent border-0 search" style={{ height: "30px",width:"" }} />
+                    <input onChange={handlesetsearch} className=" mx-3 bg-transparent border-0 search" style={{ height: "30px",width:"" }} placeholder="Seach items" />
                     <h4><i className="bi bi-search"></i></h4>
                 </div>
                 <div className="d-flex align-items-center">
