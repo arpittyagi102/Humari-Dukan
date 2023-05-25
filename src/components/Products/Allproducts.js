@@ -9,20 +9,23 @@ export default function Allproducts({ search }) {
   useEffect(() => {
     const NewData = Productdata.filter(product => product.title.toLowerCase().includes(search.toLowerCase()));
     updatefiltereddata(NewData);
-  }, [search])  
+  }, [search])
   return (
     <>
       <div className="container mt-4">
         <div className="product-outr d-flex flex-wrap justify-content-center">
           {filtereddata.map((product) => (
-           <Product
+            <Product
               key={product.key}
               id={product.key}
               title={product.title}
               image={product.image}
               cost={product.price}
+              description={product.description}
+              rating={product.rating}
+              category={product.category}
               type={"add"}
-          />
+            />
           ))}
         </div>
       </div>

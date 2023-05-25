@@ -3,12 +3,10 @@ const initialstate = [];
 const reducer = (state = initialstate, action) => {
     
 
-    if (action.type === 'addtocart')
-        {
+    if (action.type === 'addtocart'){
             return ([...state,action.payload]);
-        }
-    else if(action.type === 'removefromcart')
-    {
+    }
+    else if(action.type === 'removefromcart'){
         const temp=[...state];
         temp.splice(action.payload.id,1);
         return ([...temp])

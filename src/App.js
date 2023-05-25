@@ -8,6 +8,7 @@ import Checkout from "./components/Checking/Checkout";
 import Info from './components/Checking/Info'
 import Shipping from './components/Checking/Shipping'
 import Payment from './components/Checking/Payment'
+import Productlarge from "./components/Products/Productlarge";
 
 export default function App() {
 
@@ -33,6 +34,7 @@ export default function App() {
         <Navbar handlesetsearch={handlesetsearch}/>
         <Routes>
           <Route path="/" element={<Allproducts search={search}/>} />
+          <Route path="/productlarge" element={<Productlarge/>}/>
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} >
             <Route index path="info" element={<Info emailchange={handleemailchange} numberchange={handlenumberchange}/>} />
