@@ -29,20 +29,16 @@ export default function Product(props) {
     }
 
     return (
-        <div className=" m-4 border rounded-4 shadow-lg d-flex flex-column hover-shadow" style={{ width: "200px", overflow: "hidden" }}>
+        <div className=" m-4 border rounded-4 shadow-lg d-flex flex-column hover-shadow" style={{ width: "200px", overflow: "hidden" }} onClick={handleclick}>
             <div className="bg-white w-100 align-items-center h-50 justify-content-center d-flex object-fit-contain" >
                 <img className=" d-block m-3 object-fit-contain" src={propsvar.image} alt="not loading" style={{ maxHeight: "200px", maxWidth: "190px" }} />
             </div>
             <h4 className="m-2 mb-3">{propsvar.title}</h4>
-            <div className="mt-auto mb-3 d-flex justify-content-evenly">
-                <p className="btn btn-success mx-2 bottom-0 p-2 rounded-4 text-black d-inline" onClick={handleclick}>${propsvar.cost}</p>
-                {propstype === "add" ? (
-                    <p className="btn btn-outline-warning rounded-4 p-2" onClick={handleonClick}>Add to cart</p>
-                ) : (
-                    <p className="btn btn-outline-danger rounded-4 p-2 px-3" onClick={handleonClick}>Remove</p>
-                )}
+            <div className="mt-auto mb-3 d-flex justify-content-evenly align-items-center">
+                <p className="btn btn-outline-warning rounded-4 p-2">$ {propsvar.cost}</p>
+                <p><span className="btn btn-success rounded-4 py-0 px-2">{propsvar.rating.rate}<i className="bi bi-star-fill ms-1"/></span> ({propsvar.rating.count})</p>
 
-            </div>
+            </div> 
 
         </div>
     )
