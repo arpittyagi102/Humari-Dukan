@@ -6,7 +6,6 @@ Humari Dukaan is a fully functional e-commerce website built using React.js, Red
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
@@ -33,42 +32,29 @@ The project implements a robust data flow from product selection to the checkout
 To run the Humari Dukaan project locally, follow these steps:
 
 1. Clone the repository to your local machine:
-```git clone https://github.com/your-username/humari-dukaan.git```
+```bash
+git clone https://github.com/your-username/humari-dukaan.git
+```
 
 2. Navigate to the project directory:
-```cd humari-dukaan```
+```bash
+cd humari-dukaan
+```
 
 3. Install the dependencies using npm:
-```npm install```
+```bash
+npm install
+```
 
 
 ## Usage
 
 To start the development server and view the Humari Dukaan website, run the following command:
-```npm start```
-
+```bash
+npm start
+```
 
 This will launch the application on a local development server, typically at [http://localhost:3000](http://localhost:3000).
-
-## Project Structure
-
-The project structure of Humari Dukaan is organized as follows:
-
-humari-dukaan/
-├── public/
-│ ├── index.html
-│ └── ...
-├── src/
-│ ├── components/
-│ │ ├──Carousel/
-│ │ ├──Checking/
-│ │ ├──Navbar/
-│ │ └──Products/
-│ ├── Store/
-│ ├── App.js/
-│ └── ...
-└── ...
-
 
 ## Technologies Used
 
