@@ -16,7 +16,65 @@
     margin-bottom: 20px;
     object-fit: contain;
 }
+.thisimage{
+    max-height: 200px;
+    max-width: 190px;
+}
+.thisimage:hover{
+    animation: pulse 0.5s; /* Adjust animation name and duration as needed */
+}
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 p{
     margin:5px;
 }
+
+
+.product {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  /* Apply the animation when the elements are in view */
+  .product.active {
+    animation: moveIn 0.5s forwards;
+  }
+  
+  /* Define the animation when the elements are scrolled into view */
+  @keyframes moveIn {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateY(50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .box {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 2s, transform 0.5s;
+  }
+  
+  /* Apply the animation when the elements are in view */
+  .box.active {
+    opacity: 1;
+    transform: translateY(0);
+  }

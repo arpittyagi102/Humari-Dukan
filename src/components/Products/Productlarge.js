@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import Allproducts from "./Allproducts";
+import Productdata from './productdata.json'
 
 export default function Productlarge() {
     const { state } = useLocation();
@@ -38,7 +39,7 @@ export default function Productlarge() {
             <h1 className="m-5 mb-2">You might be intrested in <i className="bi bi-arrow-right"/></h1>
             </div>
             <hr style={{width:"80%",marginLeft:"10%"}}/>
-            <Allproducts search={""}/>
+            <Allproducts data={Productdata}/>
         </>
     )
 }
