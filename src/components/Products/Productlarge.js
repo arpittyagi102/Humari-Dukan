@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Allproducts from "./Allproducts";
 import Productdata from './productdata.json';
 import { useDispatch } from "react-redux";
-import { addtocart, removefromcart } from '../../Store/action.js'
+import { addtocart } from '../../Store/action.js'
 
 export default function Productlarge() {
     const [ifadded,setifadded]=useState(false);

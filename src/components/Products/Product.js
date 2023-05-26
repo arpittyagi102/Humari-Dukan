@@ -1,14 +1,10 @@
 import React, { useState,useRef,useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { addtocart, removefromcart } from '../../Store/action.js'
 import { useNavigate } from "react-router-dom";
 import './product.css';
 
 export default function Product(props) {
     var propsvar = {...props};
-    //console.log(propsvar);
-    const dispatch = useDispatch();
-    const [propstype, setpropstype] = useState("add");
+  
 
     const navigate =useNavigate();
 

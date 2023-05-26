@@ -1,11 +1,9 @@
 import React from "react";
 import './navbar.css';
-import { useNavigate,Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from './logo.png';
 
 export default function Navbar({ handlesetsearch, handlesetcategoryvalue, handleclearfilter }) {
-    const navigate=useNavigate();
-
 
     return (
         <>

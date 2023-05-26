@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Productdata from './productdata';
+import React from "react";
 import Product from './Product'
 
 export default function Allproducts({ data }) {
