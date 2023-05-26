@@ -26,7 +26,7 @@ export default function Product(props) {
       if (element) {
         const windowHeight = window.innerHeight;
         const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = -150;
+        const elementVisible = -170;
 
         const isVisible = elementTop < windowHeight - elementVisible;
         setIsVisible(isVisible);
@@ -50,7 +50,7 @@ export default function Product(props) {
                 <div className="mt-auto mb-3 d-flex justify-content-evenly align-items-center">
                     <p className="btn btn-outline-warning rounded-4 p-2">$ {propsvar.cost}</p>
                     <p><span className="btn btn-success rounded-4 py-0 px-2">{propsvar.rating.rate}<i className="bi bi-star-fill ms-1"/></span> ({propsvar.rating.count})</p>
-
+ 
                 </div> 
 
             </div>

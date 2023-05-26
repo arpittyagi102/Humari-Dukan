@@ -9,9 +9,13 @@ import Info from './components/Checking/Info'
 import Shipping from './components/Checking/Shipping'
 import Payment from './components/Checking/Payment'
 import Productlarge from "./components/Products/Productlarge";
-import Productdata from "./components/Products/productdata.json"
+import Productdata from "./components/Products/productdata.json";
+import Carousel from "./components/Carousel/Carousel";
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
+
+  const navigate=useNavigate();
 
   const [email,setemail]=useState("");
   const [number,setnumber]=useState("");
@@ -28,10 +32,12 @@ export default function App() {
   }
 
   function handlesetsearch(event){
+    navigate('/shop');
     setsearch(event.target.value);
   }
 
   function handlesetcategoryvalue(event){
+    navigate('/shop');
     setcategoryvalue(event.target.innerHTML);
   }
 
@@ -60,7 +66,8 @@ export default function App() {
       <div className="bg">
         <Navbar handlesetsearch={handlesetsearch} handlesetcategoryvalue={handlesetcategoryvalue} handleclearfilter={handleclearfilter}/>
         <Routes>
-          <Route path="/" element={<Allproducts data={filtereddata}/>} />
+          <Route path="/" element={<Carousel/>} />
+          <Route path="/shop" element={<Allproducts data={filtereddata}/>}/>
           <Route path="/productlarge" element={<Productlarge/>}/>
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} >

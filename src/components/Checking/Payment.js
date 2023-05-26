@@ -2,6 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Payment({email,number}) {
+
+    function orderplaced(){
+        alert("Your order has been placed! Happy Shopping");
+
+            window.location.href = "https://humaridukan.netlify.app/";
+        
+    }
     return (
         <>
             <div className="container w-75">
@@ -37,8 +44,8 @@ export default function Payment({email,number}) {
                     <div>Congratulations !! you are getting everything FREE</div>
                 </div>
                 <div className="d-flex text-primary text-lg m-3 mt-5 align-items-center justify-content-between">
-                    <Link to="/checkout/shipping"><div className="btn btn-outline-primary p-3">{"<"} Information</div></Link>
-                    <Link to="/"><div className="btn btn-success p-3">Pay Now</div></Link>
+                    <Link to="/checkout/shipping"><div className="btn btn-outline-primary p-3">{"<"} Shipping</div></Link>
+                    <Link to="/"><div className="btn btn-success p-3" onClick={orderplaced}>Pay Now</div></Link>
                 </div>
             </div>
         </>

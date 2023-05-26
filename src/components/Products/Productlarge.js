@@ -1,13 +1,32 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React,{useState} from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import Allproducts from "./Allproducts";
-import Productdata from './productdata.json'
+import Productdata from './productdata.json';
+import { useDispatch } from "react-redux";
+import { addtocart, removefromcart } from '../../Store/action.js'
 
 export default function Productlarge() {
+    const [ifadded,setifadded]=useState(false);
     const { state } = useLocation();
     const upcost = (4 * state.cost / 3).toFixed(2);
-    console.log(state);
     window.scrollTo(0, 0);
+    const spinner='<span class="spinner-border spinner-border"/>';
+    const added='Added <i class="bi bi-check-lg ms-1"></i>';
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    function handleaddtocart() {
+        dispatch(addtocart(state));
+        const button=document.getElementById("addtocartbtn");
+        button.innerHTML=spinner;
+        setTimeout(()=>{
+            setifadded(true);
+            button.innerHTML=added;
+        },2000)
+    }
+    function handlebuynow(){
+        dispatch(addtocart(state));
+        navigate('/checkout/info')
+    }
     return (
         <>
             <div className="container d-flex justify-content-center">
@@ -29,8 +48,8 @@ export default function Productlarge() {
                     <p className="ms-5 my-3 bg-body-tertiary text-secondary rounded-5 px-3 fs-6 align-items-center d-inline">Free Delivery</p>
                     <p className="mx-5 my-3 fs-5">{state.description}</p>
                     <div className="mx-5 d-flex mt-5 justify-content-evenly">
-                        <div className="btn btn-outline-primary btn-lg" style={{width:"45%"}}>Add to cart</div>
-                        <div className="btn btn-primary btn-lg" style={{width:"45%"}}>Buy now</div>
+                        <div className={`btn ${ifadded?"btn-success":"btn-outline-primary"} btn-lg`} id="addtocartbtn" style={{width:"45%"}} onClick={handleaddtocart}>Add to cart</div>
+                        <div className="btn btn-primary btn-lg" style={{width:"45%"}} onClick={handlebuynow}>Buy now</div>
                     </div>
                 </div>
             </div>

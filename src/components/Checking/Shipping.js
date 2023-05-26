@@ -30,7 +30,7 @@ export default function Shipping({ email, number }) {
                     <div>Free</div>
                 </div>
                 <div className="d-flex text-primary text-lg m-3 mt-5 align-items-center justify-content-between">
-                    <Link to="/checkout/shipping"><div className="btn btn-outline-primary p-3">{"<"} Information</div></Link>
+                    <Link to="/checkout/info"><div className="btn btn-outline-primary p-3">{"<"} Information</div></Link>
                     <Link to="/checkout/payment"><div className="btn btn-primary p-3">Continue to Payments</div></Link>
                 </div>
             </div>

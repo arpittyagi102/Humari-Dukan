@@ -37,7 +37,7 @@ export default function Info({emailchange,numberchange}) {
                     <input className="form-control mt-3 mb-4" placeholder="Phone Number for order updates" onChange={numberchange} />
                 </form>
                 <div className="d-flex text-primary text-lg m-3 mt-5 align-items-center justify-content-between">
-                    <Link to="/cart"><div className="btn btn-outline-primary p-3">{"<"} Return to Cart</div></Link>
+                    <Link to="/Shop"><div className="btn btn-outline-primary p-3">{"<"} Return to Shop</div></Link>
                     <Link to="/checkout/shipping"><div className="btn btn-primary p-3">Continue to Shipping</div></Link>
                 </div>
             </div>
