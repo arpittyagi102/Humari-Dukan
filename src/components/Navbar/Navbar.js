@@ -20,6 +20,12 @@ export default function Navbar({ handlesetsearch }) {
                         <h1><i className="bi bi-cart3"></i></h1></Link>
                 </div>
             </div>
+                <div className="justify-content-evenly bg-info-subtle position-sticky d-flex px-5">
+                    <div className="fs-5 p-1 px-5 smnvit">Men's clothing</div>
+                    <div className="fs-5 p-1 px-5 smnvit">Jewelery</div>
+                    <div className="fs-5 p-1 px-5 smnvit">Electronics</div>
+                    <div className="fs-5 p-1 px-5 smnvit">Women's clothing</div>
+                </div>
         </>
     )
 }

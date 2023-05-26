@@ -78,3 +78,12 @@ body{
     font-size: large;
 
 }
+.smnvit{
+    opacity: 0.8;
+    font-family: 'Times New Roman', Times, serif;
+}
+.smnvit:hover{
+    cursor: pointer;
+    opacity: 1;
+    background-color: black;
+}
