@@ -93,6 +93,13 @@ The Humari Dukaan project utilizes the following technologies and libraries:
             <b>Soham Dutta</b>
         </a>
     </td>
+    <td>
+        <a href="https://github.com/sid12701">
+            <img src="https://avatars.githubusercontent.com/u/78287897?v=4" width="100px" alt="Siddhant"/>
+                <br />
+            <b>Siddhant</b>
+        </a>
+    </td>
 </table>
 
 ## Contributing
