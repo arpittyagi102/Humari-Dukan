@@ -21,12 +21,42 @@ export default function Navbar({ handlesetsearch, handlesetcategoryvalue, handle
                         <h1><i className="bi bi-cart3"></i></h1></Link>
                 </div>
             </div>
-                <div className="justify-content-evenly bg-info-subtle w-100 d-flex px-5">
-                    <div className="fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Men's clothing</div>
-                    <div className="fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Jewelery</div>
-                    <div className="fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Electronics</div>
-                    <div className="fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Women's clothing</div>
-                </div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-eve">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#" onClick={handlesetcategoryvalue} >Women's clothing</a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-between" style={{paddingLeft: '1rem' , paddingRight: '1rem'}}>
+        <li class="nav-item">
+          <a class="nav-link active fs-5 p-1 px-5 smnvit" aria-current="page" href="#"  onClick={handlesetcategoryvalue}>Men's clothing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5 p-1 px-5 smnvit" href="#"  onClick={handlesetcategoryvalue}>Jewelery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5 p-1 px-5 smnvit" href="#" onClick={handlesetcategoryvalue}>Electronics</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
         </>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
