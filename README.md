@@ -100,6 +100,13 @@ The Humari Dukaan project utilizes the following technologies and libraries:
             <b>Siddhant</b>
         </a>
     </td>
+    <td>
+        <a href="https://github.com/Silent-Watcher">
+            <img src="https://avatars.githubusercontent.com/u/91375198?v=4" width="100px" alt="Siddhant"/>
+                <br />
+            <b>Silent-Watcher</b>
+        </a>
+    </td>
 </table>
 
 ## Contributing
