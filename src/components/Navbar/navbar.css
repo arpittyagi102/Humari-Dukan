@@ -99,3 +99,12 @@ nav {
     display: flex;
     justify-content: space-evenly!important; 
 }
+
+.navbarHeading{
+    color: black;
+    font-weight: 800;
+}
+
+.bi-cart3{
+    color: black;
+}
