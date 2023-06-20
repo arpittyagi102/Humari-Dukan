@@ -7,7 +7,7 @@ export default function Navbar({ handlesetsearch, handlesetcategoryvalue, handle
 
     return (
         <>
-            <div className="navbar justify-content-evenly bg-dark-subtle position-sticky top-0 border border-dark d-flex">
+            <div className="navbar justify-content-evenly position-sticky top-0 border border-dark d-flex">
                 <div className="d-flex align-items-center">
                     <img src={logo} alt="logo" className="px-4" />
                     <Link onClick={handleclearfilter} to='/' style={{ textDecoration: "none", color: "white",fontFamily:"Lucida handwriting,Time New Roman"}}><h3>Humari Dukaan</h3></Link>
