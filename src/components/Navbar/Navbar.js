@@ -7,12 +7,12 @@ export default function Navbar({ handlesetsearch, handlesetcategoryvalue, handle
 
     return (
         <>
-            <div className="navbar justify-content-evenly bg-dark-subtle position-sticky top-0 border border-dark d-flex">
+            <div className="navbar justify-content-evenly position-sticky top-0 d-flex">
                 <div className="d-flex align-items-center">
                     <img src={logo} alt="logo" className="px-4" />
-                    <Link onClick={handleclearfilter} to='/' style={{ textDecoration: "none", color: "white",fontFamily:"Lucida handwriting,Time New Roman"}}><h3>Humari Dukaan</h3></Link>
+                    <Link onClick={handleclearfilter} to='/' style={{ textDecoration: "none", color: "white",fontFamily:"Lucida handwriting,Time New Roman"}}><h3 className="navbarHeading">Humari Dukaan</h3></Link>
                 </div>
-                <div className="d-flex align-items-center border-bottom">
+                <div className="d-flex align-items-center border-bottom border-light">
                     <input onChange={handlesetsearch} className=" mx-3 bg-transparent border-0 search" id="search" style={{ height: "30px",width:"" }} placeholder="Seach items" />
                     <h4><i className="bi bi-search"></i></h4>
                 </div>
