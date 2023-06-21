@@ -93,7 +93,12 @@ body{
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(8px);
 }
-
+@media only screen and (min-width:800px){
+    .navbar{
+        z-index: 1;
+        --bs-navbar-padding-y: 0;
+    }
+}
 
 nav {
     display: flex;
