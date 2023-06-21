@@ -90,7 +90,12 @@ body{
 .navbar{
     z-index: 1;
 }
-
+@media only screen and (min-width:800px){
+    .navbar{
+        z-index: 1;
+        --bs-navbar-padding-y: 0;
+    }
+}
 
 nav {
     display: flex;

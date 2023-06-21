@@ -1,4 +1,5 @@
 import React from "react";
+import './Carousel.css';
 import img1 from './img1.png';
 import img2 from './img2.png';
 import img3 from './img3.png';
@@ -18,19 +19,19 @@ export default function Carousel() {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={img1} className="d-block w-100" alt="can't load" />
+            <img src={img1} className="d-block w-100 carousel-img" alt="can't load" />
           </div>
           <div className="carousel-item">
-            <img src={img2} className="d-block w-100" alt="can't load" />
+            <img src={img2} className="d-block w-100 carousel-img" alt="can't load" />
           </div>
           <div className="carousel-item">
-            <img src={img3} className="d-block w-100" alt="can't load" />
+            <img src={img3} className="d-block w-100 carousel-img" alt="can't load" />
           </div>
           <div className="carousel-item">
-            <img src={img4} className="d-block w-100" alt="can't load" />
+            <img src={img4} className="d-block w-100 carousel-img" alt="can't load" />
           </div>
           <div className="carousel-item">
-            <img src={img5} className="d-block w-100" alt="can't load" />
+            <img src={img5} className="d-block w-100 carousel-img" alt="can't load" />
           </div>
         </div>
         <button
