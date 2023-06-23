@@ -43,9 +43,6 @@ export default function Shipping({ email, number }) {
                         <li className="breadcrumb-item active" aria-current="page">
                             <Link to="/checkout/shipping">Shipping</Link>
                         </li>
-                        <li className="breadcrumb-item">
-                            <Link to="/checkout/payment">Payment</Link>
-                        </li>
                     </ol>
                 </nav>
                 <table className="d-grid border p-3 rounded-4 my-5 mb-4">
@@ -88,11 +85,20 @@ export default function Shipping({ email, number }) {
                             </div>
                         </Link>
                     ) : (
-                        <Link to="/checkout/payment">
-                            <div className="btn btn-primary p-3">Continue to Payments</div>
-                        </Link>
+                        <>
+                            {shippingMethod ? (
+                                <Link to="/checkout/payment">
+                                    <div className="btn btn-primary p-3">Continue to Payments</div>
+                                </Link>
+                            ) : (
+                                <div className="btn btn-primary p-3" onClick={() => alert("Please select an option")}>
+                                    Select an option
+                                </div>
+                            )}
+                        </>
                     )}
                 </div>
+
             </div>
         </>
     );
