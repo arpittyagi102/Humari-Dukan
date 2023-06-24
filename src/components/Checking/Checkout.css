@@ -2,3 +2,42 @@
     width: 100%;
     height: 250px;
 }
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container>div {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .container>div {
+        flex: 0 1 calc(50% - 20px);
+        margin-bottom: 0;
+    }
+}
+
+.bg-primary {
+    background-color: #007bff;
+}
+
+.p-5 {
+    padding: 20px;
+}
+
+.text-white {
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .text-white {
+        color: #000;
+    }
+}
