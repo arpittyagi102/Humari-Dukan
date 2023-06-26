@@ -29,16 +29,16 @@ export default function Navbar({ handlesetsearch, handlesetcategoryvalue, handle
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-evenly" style={{ paddingLeft: '1rem', paddingRight: '1rem', width:"100%" }}>
               <li className="nav-item">
-                <a class="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue} >Women's clothing</a>
+                <Link className="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue} >Women's clothing</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-5 p-1 px-5 smnvit" aria-current="page" onClick={handlesetcategoryvalue}>Men's clothing</a>
+                <Link className="nav-link fs-5 p-1 px-5 smnvit" aria-current="page" onClick={handlesetcategoryvalue}>Men's clothing</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Jewelery</a>
+                <Link className="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Jewelery</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Electronics</a>
+                <Link className="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Electronics</Link>
               </li>
             </ul>
           </div>
