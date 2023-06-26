@@ -48,6 +48,7 @@ p{
   
   /* Apply the animation when the elements are in view */
   .product.active {
+    opacity: 1;
     animation: moveIn 0.5s forwards;
   }
   
