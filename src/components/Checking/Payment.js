@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './Payments.css';
+import { useContext } from "react";
 
-export default function Payment({ email, number }) {
+export default function Payment({ email, number}) {
     const [paymentMethod, setPaymentMethod] = useState("");
 
     const handlePaymentMethodChange = (event) => {

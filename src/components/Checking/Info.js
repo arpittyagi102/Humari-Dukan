@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import { DarkModeContext } from "../../App";
 
 export default function Info({emailchange,numberchange}) {
+    const mode = useContext(DarkModeContext)
+    const textColor = mode === 'dark' ? 'light' : 'dark'
     return (
         <>
             <div className="container w-75">
@@ -14,10 +17,10 @@ export default function Info({emailchange,numberchange}) {
                     </ol>
                 </nav>
                 <form>
-                    <h4>Contact</h4>
+                    <h4 className={`text-${textColor}`}>Contact</h4>
                     <input type="email" className="form-control mt-3 mb-1" placeholder="Email" onChange={emailchange} />
                     <input type="checkbox" class="form-check-input mt-2 me-1" id="exampleCheck1" /> get order updates
-                    <h4 className="mt-4 mb-3">Shipping Address</h4>
+                    <h4 className={`mt-4 mb-3 text-${textColor}`}>Shipping Address</h4>
                     <select class="form-select">
                         <option selected>India</option>
                         <option value="1">United Kingdom</option>

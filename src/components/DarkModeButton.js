@@ -14,7 +14,7 @@ export const DarkModeButton = () => {
         }
     }
   return (
-    <button type="button" className={`btn btn-outline-${mode === 'dark' ? 'light' : 'dark'} btn-lg`} onClick={handleMode}>Dark Mode</button>
+    <button type="button" className={`btn btn-outline-${mode === 'dark' ? 'light' : 'dark'} btn-lg`} onClick={handleMode}>{mode === 'dark' ? 'Light Mode' : 'Dark Mode'}</button>
     
   )
 }

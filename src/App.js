@@ -85,7 +85,7 @@ export default function App() {
               <Route path="/checkout" element={<Checkout />} >
                 <Route index path="info" element={<Info emailchange={handleemailchange} numberchange={handlenumberchange} />} />
                 <Route path="shipping" element={<Shipping email={email} number={number} />} />
-                <Route path="payment" element={<Payment email={email} number={number} />} />
+                <Route path="payment" element={<Payment email={email} number={number} mode={darkMode}/>} />
               </Route>
             </Routes>  
           </DarkModeContext.Provider>
