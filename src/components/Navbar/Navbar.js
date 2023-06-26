@@ -19,26 +19,26 @@ export default function Navbar({ handlesetsearch, handlesetcategoryvalue, handle
         <div className="d-flex align-items-center">
           <Link to="/checkout/info" style={{ textDecoration: "none", color: "white" }}>
             <h1><i className="bi bi-cart3"></i></h1></Link>
-        </div>
+        </div> 
       </div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-eve">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-eve">
+        <div className="container-fluid">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-evenly" style={{ paddingLeft: '1rem', paddingRight: '1rem', width:"100%" }}>
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 justify-content-evenly" style={{ paddingLeft: '1rem', paddingRight: '1rem', width: "100%" }}>
               <li className="nav-item">
-                <a class="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue} >Women's clothing</a>
+                <h5 className="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue} >Women's clothing</h5>
               </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5 p-1 px-5 smnvit" aria-current="page" onClick={handlesetcategoryvalue}>Men's clothing</a>
+              <li className="nav-item">
+                <h5 className="nav-link fs-5 p-1 px-5 smnvit" aria-current="page" onClick={handlesetcategoryvalue}>Men's clothing</h5>
               </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Jewelery</a>
+              <li className="nav-item">
+                <h5 className="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Jewelery</h5>
               </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Electronics</a>
+              <li className="nav-item">
+                <h5 className="nav-link fs-5 p-1 px-5 smnvit" onClick={handlesetcategoryvalue}>Electronics</h5>
               </li>
             </ul>
           </div>
