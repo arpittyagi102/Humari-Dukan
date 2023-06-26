@@ -1,6 +1,6 @@
 # Humari Dukaan - E-Commerce Website
 
-![](https://github.com/arpittyagirocks/Humari-Dukan/blob/d76f64f41d09fac85d0bb6ad3a038490845980a7/scrnli_5_26_2023_8-04-24%20PM.gif)
+![](demo.gif)
 Humari Dukaan is a fully functional e-commerce website built using React.js, Redux, React Router, Bootstrap, and Bootstrap Icons. The project aims to provide users with a seamless shopping experience and incorporates various features such as image carousel, scroll animations, search functionality, category-wise shopping, and a robust checkout system.
 
 ## Table of Contents
@@ -98,6 +98,13 @@ The Humari Dukaan project utilizes the following technologies and libraries:
             <img src="https://avatars.githubusercontent.com/u/78287897?v=4" width="100px" alt="Siddhant"/>
                 <br />
             <b>Siddhant</b>
+        </a>
+    </td>
+    <td>
+        <a href="https://github.com/Silent-Watcher">
+            <img src="https://avatars.githubusercontent.com/u/91375198?v=4" width="100px" alt="Siddhant"/>
+                <br />
+            <b>Silent-Watcher</b>
         </a>
     </td>
 </table>
