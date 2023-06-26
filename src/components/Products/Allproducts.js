@@ -11,7 +11,7 @@ export default function Allproducts({ data }) {
   }, [search]) */
   return (
     <>
-      <div className="container mt-4">
+      <div className="container mt-4" style={{minHeight: '100vh'}}>
         <div className="product-outr d-flex flex-wrap justify-content-center">
           {data.map((product) => (
             <Product

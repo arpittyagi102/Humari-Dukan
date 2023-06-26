@@ -12,7 +12,10 @@ import Productlarge from "./components/Products/Productlarge";
 import Productdata from "./components/Products/productdata.json";
 import Carousel from "./components/Carousel/Carousel";
 import { useNavigate } from "react-router-dom";
+import { createContext } from "react";
 
+export const SetDarkModeContext = React.createContext()
+export const DarkModeContext = React.createContext()
 export default function App() {
   const navigate = useNavigate();
 
@@ -21,6 +24,7 @@ export default function App() {
   const [search, setsearch] = useState("");
   const [categoryvalue, setcategoryvalue] = useState("");
   const [isLoading, setIsLoading] = useState(true); // Add isLoading state
+  const [darkMode, setDarkMode] = useState('dark')
 
   function handleemailchange(event) {
     setemail(event.target.value);
@@ -66,11 +70,13 @@ export default function App() {
 
   return (
     <>
-      <div className="bg">
+      <div className={`bg-${darkMode}`}>
         {isLoading ? (
           <Preloader /> // Render the Preloader component while loading
         ) : (
           <>
+          <SetDarkModeContext.Provider value={setDarkMode}>
+          <DarkModeContext.Provider value={darkMode}>
             <Navbar handlesetsearch={handlesetsearch} handlesetcategoryvalue={handlesetcategoryvalue} handleclearfilter={handleclearfilter} />
             <Routes>
               <Route path="/" element={<Carousel />} />
@@ -81,7 +87,9 @@ export default function App() {
                 <Route path="shipping" element={<Shipping email={email} number={number} />} />
                 <Route path="payment" element={<Payment email={email} number={number} />} />
               </Route>
-            </Routes>
+            </Routes>  
+          </DarkModeContext.Provider>
+          </SetDarkModeContext.Provider>
           </>
         )}
       </div>
