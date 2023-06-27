@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { DarkModeContext } from "../../App";
 
 export default function Shipping({ email, number }) {
+    const mode = useContext(DarkModeContext)
+    const textColor = mode === 'dark' ? 'light' : 'dark'
+    const bgColor = mode === 'dark' ? 'dark' : 'light'
     const [shippingMethod, setShippingMethod] = useState("");
 
     const handleShippingMethodChange = (e) => {
@@ -63,7 +68,7 @@ export default function Shipping({ email, number }) {
                             Select Shipping Method
                         </label>
                         <select
-                            className="form-select"
+                            className={`form-select bg-${bgColor}`}
                             id="shippingMethod"
                             value={shippingMethod}
                             onChange={handleShippingMethodChange}

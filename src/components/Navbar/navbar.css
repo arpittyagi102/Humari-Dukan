@@ -109,16 +109,9 @@ nav {
     color: white;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
-    opacity: 1; /* Firefox */
+
+
+  .bg-navblue{
+    background-color: #00adff;
+    opacity: 0.7;
   }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: white;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: white;
-  }
-  

@@ -9,6 +9,7 @@ import { DarkModeContext } from "../../App";
 export default function Navbar({ handlesetsearch, handlesetcategoryvalue, handleclearfilter }) {
   const mode = useContext(DarkModeContext)
   const textColor = mode === 'dark' ? 'light' : 'dark'
+  const bgColor = mode === 'dark' ? 'body-tertiary' : 'navblue'
   return (
     <>
       <div className={`navbar justify-content-evenly position-sticky top-0 d-flex bg-${mode}`}>
@@ -17,7 +18,7 @@ export default function Navbar({ handlesetsearch, handlesetcategoryvalue, handle
           <Link onClick={handleclearfilter} to='/' style={{ textDecoration: "none", color: "white", fontFamily: "Lucida handwriting,Time New Roman" }}><h3 className={`navbarHeading text-${textColor}`}>Humari Dukaan</h3></Link>
         </div>
         <div className={`d-flex align-items-center border-bottom border-${textColor}`}>
-          <input onChange={handlesetsearch} className={`mx-3 bg-transparent border-0 search text-${textColor}`} id="search" style={{ height: "30px", width: "" }} placeholder="Seach items" />
+          <input onChange={handlesetsearch} className={`mx-3 bg-transparent border-0 search text-${textColor}`} id="search" style={{ height: "30px", color: 'black' }} placeholder="Seach items" />
           <h4><i className={`bi bi-search text-${textColor}`}></i></h4>
         </div>
         <div className="d-flex align-items-center">
@@ -28,7 +29,7 @@ export default function Navbar({ handlesetsearch, handlesetcategoryvalue, handle
           <DarkModeButton/>
         </div>
       </div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-eve">
+      <nav class={`navbar navbar-expand-lg bg-${bgColor} d-flex justify-content-eve`}>
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
