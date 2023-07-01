@@ -53,3 +53,11 @@
     background-color: #218838;
     border-color: #218838;
 }
+
+
+
+  @media (max-width:1024px) {
+    .container{
+        width: 100% !important;
+    }
+} 
