@@ -19,7 +19,7 @@ export default function Checkout() {
                     <Outlet />
                 </div>
                 <div className=" gift-card w-40 bg-primary p-5" data-bs-theme="light" style={{ width: "40%" }}>
-                    <div style={{ maxHeight: "400px",overflow:"hidden" }}>
+                    <div className="cart-item" style={{ maxHeight: "400px",overflow:"hidden" }}>
                         {data.map((product) => (
                             <Product2
                                 title={product.title}
