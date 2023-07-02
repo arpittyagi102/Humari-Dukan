@@ -18,7 +18,7 @@ export default function Checkout() {
                 <div className="w-75 container m-5" style={{ width: "60%" }}>
                     <Outlet />
                 </div>
-                <div className=" gift-card w-40 bg-primary p-5" data-bs-theme="light" style={{ width: "40%" }}>
+                <div className=" gift-card w-40 bg-primary p-3" data-bs-theme="light" style={{ width: "40%" }}>
                     <div className="cart-item" style={{ maxHeight: "400px",overflow:"hidden" }}>
                         {data.map((product) => (
                             <Product2
