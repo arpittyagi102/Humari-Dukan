@@ -41,11 +41,18 @@ export default function Product2(props) {
         <h5 className="m-3 mx-2 text-white">{props.title}</h5>
         <div className="h-100 d-flex align-items-center">
           <p className="btn btn-warning ms-auto p-2 rounded-4 text-black d-inline">${props.cost}</p>
-          <div className="quantity-buttons">
-            <button className="_23FHuj" onClick={() => handleQuantityChange("decrease")}>–</button>
-            <input type="text" className="_253qQJ" value={quantity} readOnly />
-            <button className="_23FHuj" onClick={() => handleQuantityChange("increase")}>+</button>
+          
+          <div class="checkout-section">
+            <div class="btn-container">
+              <button class="minus-btn _23FHuj" onClick={() => handleQuantityChange("decrease")}>–</button>
+                <div class="input-container">
+                  <input type="text" class="quantity-input _253qQJ" value={quantity} readOnly />
+                </div>
+              <button class="plus-btn _23FHuj" onClick={() => handleQuantityChange("increase")}>+</button>
+            </div>
           </div>
+
+
           <i className="bi bi-x-lg" onClick={handleRemoveFromCart}></i>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Product2 from "../Products/Product2";
-import { Modal, Button } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { removefromcart } from "../../Store/action";
