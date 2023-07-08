@@ -2,27 +2,22 @@ const initialState = [];
 
 const reducer = (state = initialState, action) => {
   if (action.type === 'addtocart') {
-    const existingProduct = state.find((item) => item.id === action.payload.id);
+    const temp = [...state];
+    
+    const existingProduct = temp.find((item) => {
+      if (item.product.id === action.payload.id) {
+        item.quantity += 1;
+      }
+      return item.product.id === action.payload.id
+    });
 
-    if (existingProduct) {
-      const updatedState = state.map((item) => {
-        if (item.id === action.payload.id) {
-          return {
-            ...item,
-            count: item.count + 1,
-            price: item.price + action.payload.price,
-          };
-        }
-        return item;
-      });
+    if(existingProduct) return ([...temp]);
 
-      console.log(updatedState);
-      return updatedState;
-    } else {
-      console.log([...state, action.payload]);
-      return [...state, action.payload];
-    }
-  } else if (action.type === 'removefromcart') {
+    const newItem = {quantity: 1, product: action.payload};
+    console.log([...temp, newItem]);
+    return [...temp, newItem];
+  } 
+  else if (action.type === 'removefromcart') {
     const temp = [...state];
     temp.splice(action.payload.id, 1);
     return temp;

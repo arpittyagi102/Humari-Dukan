@@ -8,12 +8,16 @@ import { addtocart } from '../../Store/action.js'
 export default function Productlarge() {
     const [ifadded,setifadded]=useState(false);
     const { state } = useLocation();
+
     const upcost = (4 * state.cost / 3).toFixed(2);
     window.scrollTo(0, 0);
+    
     const spinner='<span class="spinner-border spinner-border"/>';
     const added='Added <i class="bi bi-check-lg ms-1"></i>';
+    
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    
     function handleaddtocart() {
         dispatch(addtocart(state));
         const button=document.getElementById("addtocartbtn");
@@ -23,6 +27,7 @@ export default function Productlarge() {
             button.innerHTML=added;
         },2000)
     }
+    
     function handlebuynow(){
         dispatch(addtocart(state));
         navigate('/checkout/info')

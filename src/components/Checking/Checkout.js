@@ -8,15 +8,15 @@ export default function Checkout() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state);
 
-  const [quantities, setQuantities] = useState({});
   const [total, setTotal] = useState(0);
 
   // Update the quantity and total price
   const handleQuantityChange = (productId, newQuantity) => {
-    setQuantities((prevQuantities) => ({
-      ...prevQuantities,
-      [productId]: newQuantity,
-    }));
+    // setQuantities((prevQuantities) => ({
+    //   ...prevQuantities,
+    //   [productId]: newQuantity,
+    // }));
+    console.log(productId, newQuantity)
   };
 
   // Remove item from cart
@@ -31,16 +31,14 @@ export default function Checkout() {
     const calculateTotal = () => {
       let totalPrice = 0;
       for (let i = 0; i < cartItems.length; i++) {
-        const item = cartItems[i];
-        const quantity = quantities[item.id] || 1;
-        totalPrice += item.cost * quantity;
+        totalPrice += cartItems[i].product.cost * cartItems[i].quantity;
       }
       return totalPrice.toFixed(2);
     };
 
     const totalPrice = calculateTotal();
     setTotal(totalPrice);
-  }, [quantities, cartItems]);
+  }, [cartItems]);
 
   return (
     <>
@@ -50,16 +48,16 @@ export default function Checkout() {
         </div>
         <div className="gift-card w-40 bg-primary p-3" data-bs-theme="light" style={{ width: "40%" }}>
           <div className="cart-item" style={{ maxHeight: "400px", overflow: "auto" }}>
-            {cartItems.map((product) => (
+            {cartItems.map((item) => (
               <Product2
-                key={product.id}
-                id={product.id}
-                title={product.title}
-                image={product.image}
-                cost={product.cost}
-                initialQuantity={quantities[product.id] || 1}
+                key={item.product.id}
+                id={item.product.id}
+                title={item.product.title}
+                image={item.product.image}
+                cost={item.product.cost}
+                quantity={item.quantity}
                 onChange={handleQuantityChange}
-                onRemove={() => handleRemoveFromCart(product)}
+                onRemove={() => handleRemoveFromCart(item)}
               />
             ))}
           </div>
