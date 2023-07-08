@@ -78,3 +78,46 @@ p{
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Decrease and Increase Buttons */
+  
+  .checkout-section .btn-container {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+  }
+  
+  .checkout-section button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 3px; /* Added margin for spacing */
+  }
+  
+  .checkout-section .input-container {
+    display: flex;
+    align-items: center;
+    margin: 0 3px; /* Added margin for spacing */
+  }
+  
+  .checkout-section .quantity-input {
+    width: 40px;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+    padding: 0 5px;
+    text-align: center;
+    background-color: #ffffff;
+    color: black;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  

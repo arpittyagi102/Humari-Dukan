@@ -1,20 +1,19 @@
 const addtocart = (data) => {
     return (dispatch) => {
-        dispatch({
-            type: 'addtocart',
-            payload: data
-        })
-    }
-}
-
-const removefromcart = (data) => {
-    console.log(data);
+      dispatch({
+        type: 'addtocart',
+        payload: data
+      });
+    };
+  };
+  
+  const removefromcart = (itemId) => {
     return (dispatch) => {
-        dispatch({
-            type: 'removefromcart',
-            payload: data
-        })
-    }
-}
-
-export {addtocart,removefromcart};
+      dispatch({
+        type: 'removefromcart',
+        payload: itemId,
+      });
+    };
+  };
+  
+  export { addtocart, removefromcart };
