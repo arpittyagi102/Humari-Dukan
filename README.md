@@ -78,69 +78,59 @@ The Humari Dukaan project utilizes the following technologies and libraries:
 
 ## Contributers
 
-<table>
-<tr>
-    <td>
-        <a href="https://github.com/arpittyagirocks">
-            <img src="https://avatars.githubusercontent.com/u/94587985?v=4" width="100px" alt="Arpit Tyagi"/>
-                <br />
-            <b>Arpit Tyagi</b>
-        </a>
-    </td>
-    <td>
-        <a href="https://github.com/shm-dsgn">
-            <img src="https://avatars.githubusercontent.com/u/77527904?v=4" width="100px" alt="Soham Dutta"/>
-                <br />
-            <b>Soham Dutta</b>
-        </a>
-    </td>
-    <td>
-        <a href="https://github.com/sid12701">
-            <img src="https://avatars.githubusercontent.com/u/78287897?v=4" width="100px" alt="Siddhant"/>
-                <br />
-            <b>Siddhant</b>
-        </a>
-    </td>
-    <td>
-        <a href="https://github.com/Silent-Watcher">
-            <img src="https://avatars.githubusercontent.com/u/91375198?v=4" width="100px" alt="Siddhant"/>
-                <br />
-            <b>Silent-Watcher</b>
-        </a>
-    </td>
-    </tr>
-    <tr>
-    <td>
-        <a href="https://github.com/Pulkitxm">
-            <img src="https://avatars.githubusercontent.com/u/65671483?v=4" width="100px" alt="Siddhant"/>
-                <br />
-            <b>Pulkit</b>
-        </a>
-    </td>
-     <td>
-        <a href="https://github.com/aasimtaif">
-            <img src="https://avatars.githubusercontent.com/u/83891519?v=4" width="100px" alt="Siddhant"/>
-                <br />
-            <b>Mohd Asim Taifullah</b>
-        </a>
-    </td>
-     <td>
-        <a href="https://github.com/Silent-Watcher">
-            <img src="https://avatars.githubusercontent.com/u/115504480?v=4" width="100px" alt="Siddhant"/>
-                <br />
-            <b>Akash Gupta</b>
-        </a>
-    </td>
-     <td>
-        <a href="https://github.com/Silent-Watcher">
-            <img src="https://avatars.githubusercontent.com/u/114601400?v=4" width="100px" alt="Siddhant"/>
-                <br />
-            <b>VIVEK KUMAR</b>
-        </a>
-    </td>
-    </tr>
+## Contributors
 
-</table>
+<a href="https://github.com/arpittyagi102">
+  <img src="https://avatars.githubusercontent.com/u/94587985?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+<a href="https://github.com/Pulkitxm">
+  <img src="https://avatars.githubusercontent.com/u/65671483?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+<a href="https://github.com/Akash1965">
+  <img src="https://avatars.githubusercontent.com/u/115504480?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+<a href="https://github.com/avinashji1302">
+  <img src="https://avatars.githubusercontent.com/u/91355822?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+<a href="https://github.com/roc102">
+  <img src="https://avatars.githubusercontent.com/u/100594349?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+<a href="https://github.com/aasimtaif">
+  <img src="https://avatars.githubusercontent.com/u/83891519?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+<a href="https://github.com/shm-dsgn">
+  <img src="https://avatars.githubusercontent.com/u/77527904?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+<a href="https://github.com/Silent-Watcher">
+  <img src="https://avatars.githubusercontent.com/u/91375198?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+<a href="https://github.com/sid12701">
+  <img src="https://avatars.githubusercontent.com/u/78287897?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+<a href="https://github.com/sohaibaumer">
+  <img src="https://avatars.githubusercontent.com/u/120295412?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+<a href="https://github.com/VIVEKIITdelhi">
+  <img src="https://avatars.githubusercontent.com/u/114601400?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+<a href="https://github.com/aharonYK">
+  <img src="https://avatars.githubusercontent.com/u/87654852?v=4" width="120px"
+  style="border-radius: 50%;"/>
+</a>
+
+
+------
 
 
 
