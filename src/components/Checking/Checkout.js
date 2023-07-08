@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Product2 from "../Products/Product2";
 import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { removefromcart } from "../../Store/action";
+import { removefromcart, updateCart } from "../../Store/action";
 
 export default function Checkout() {
   const dispatch = useDispatch();
@@ -11,13 +11,9 @@ export default function Checkout() {
   const [total, setTotal] = useState(0);
 
   // Update the quantity and total price
-  const handleQuantityChange = (productId, newQuantity) => {
-    // setQuantities((prevQuantities) => ({
-    //   ...prevQuantities,
-    //   [productId]: newQuantity,
-    // }));
-    console.log(productId, newQuantity)
-  };
+  const handleQuantityChange = (productId, type) => {
+    dispatch(updateCart({productId, type}))
+ };
 
   // Remove item from cart
   const handleRemoveFromCart = (product) => {

@@ -21,15 +21,8 @@ export default function Product2(props) {
     setShowModal(false);
   };
 
-  function handleQuantityChange(value) {
-    // if (value === "increase") {
-    //   setQuantity(quantity + 1);
-    //   props.onChange(props.id, quantity + 1);
-    // } else if (value === "decrease" && quantity > 1) {
-    //   setQuantity(quantity - 1);
-    //   props.onChange(props.id, quantity - 1);
-    // }
-    console.log(value)
+  function handleQuantityChange(type) {
+    props.onChange(props.id, type)
   }
 
   return (
