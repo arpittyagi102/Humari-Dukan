@@ -11,10 +11,10 @@ axios.get(`https://api.github.com/repos/${owner}/${repo}/contributors`)
     let contributorsSection = '## Contributors\n\n';
     response.data.forEach((contributor) => {
       contributorsSection += `<a href="${contributor.html_url}">
-  <img src="${contributor.avatar_url}" width="120px"
-  style="border-radius: 50%;"/>
+  <img src="https://images.weserv.nl/?url=${contributor.avatar_url}&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="120px"/>
 </a>
-`;});
+`;
+    });
 
     // Read the existing README.md file
     fs.readFile('README.md', 'utf8', (readError, data) => {
@@ -24,10 +24,15 @@ axios.get(`https://api.github.com/repos/${owner}/${repo}/contributors`)
       }
 
       // Update the contributors section in the README content
+      const regex = new RegExp('## Contributors[\\s\\S]*<br class="br"/>');
       const updatedReadmeContent = data.replace(
-        /## Contributers[\s\S]*------/,
-        `## Contributers\n\n${contributorsSection}\n\n------`
+        regex,
+        `## Contributors\n\n${contributorsSection}\n<br class="br"/>`
       );
+
+      
+      
+      console.log(updatedReadmeContent);
 
       // Write the updated content back to the README.md file
        fs.writeFile('README.md', updatedReadmeContent, 'utf8', (writeError) => {
