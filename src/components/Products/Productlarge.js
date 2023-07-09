@@ -1,9 +1,10 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Allproducts from "./Allproducts";
-import Productdata from './productdata.json';
+import Productdata from "./productdata.json";
 import { useDispatch } from "react-redux";
-import { addtocart } from '../../Store/action.js'
+import { addtocart } from "../../Store/action.js";
+import "./Productlarge.css";
 
 export default function Productlarge() {
     const [ifadded,setifadded]=useState(false);
@@ -58,12 +59,14 @@ export default function Productlarge() {
                     </div>
                 </div>
             </div>
-            <div className="container">
-
-            <h1 className="m-5 mb-2">You might be intrested in <i className="bi bi-arrow-right"/></h1>
-            </div>
-            <hr style={{width:"80%",marginLeft:"10%"}}/>
-            <Allproducts data={Productdata}/>
+          </div>
+          <div className="container">
+            <h1 className="m-5 mb-2">
+              You might be intrested in <i className="bi bi-arrow-right" />
+            </h1>
+          </div>
+          <hr style={{ width: "80%", marginLeft: "10%" }} />
+          <Allproducts data={Productdata} />
         </>
-    )
-}
+      );
+    }

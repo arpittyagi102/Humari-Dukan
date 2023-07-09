@@ -1,7 +1,7 @@
 const axios = require('axios');
 const fs = require('fs');
 
-const owner = 'arpittyagirocks';
+const owner = 'arpittyagi102';
 const repo = 'Humari-Dukan';
 
 // Fetch the contributors from the GitHub API
@@ -10,7 +10,10 @@ axios.get(`https://api.github.com/repos/${owner}/${repo}/contributors`)
     // Generate the contributors section in markdown format
     let contributorsSection = '## Contributors\n\n';
     response.data.forEach((contributor) => {
-      contributorsSection += `- ${contributor.login}\n`;
+      contributorsSection += `<a href="${contributor.html_url}">
+  <img src="https://images.weserv.nl/?url=${contributor.avatar_url}&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="120px"/>
+</a>
+`;
     });
 
     // Read the existing README.md file
@@ -21,19 +24,20 @@ axios.get(`https://api.github.com/repos/${owner}/${repo}/contributors`)
       }
 
       // Update the contributors section in the README content
+      const regex = new RegExp('## Contributors[\\s\\S]*<br class="br"/>');
       const updatedReadmeContent = data.replace(
-        /## Contributors[\s\S]*## Contributors-END/,
-        `## Contributors\n\n${contributorsSection}\n\n## Contributors-END`
+        regex,
+        `## Contributors\n\n${contributorsSection}\n<br class="br"/>`
       );
 
       // Write the updated content back to the README.md file
-      fs.writeFile('README.md', updatedReadmeContent, 'utf8', (writeError) => {
+       fs.writeFile('README.md', updatedReadmeContent, 'utf8', (writeError) => {
         if (writeError) {
           console.error(`Error writing to README.md: ${writeError}`);
           return;
         }
         console.log('Contributors section updated in README.md');
-      });
+      }); 
     });
   })
   .catch((error) => {
