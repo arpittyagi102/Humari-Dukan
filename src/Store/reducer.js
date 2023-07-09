@@ -1,34 +1,44 @@
 const initialState = [];
 
 const reducer = (state = initialState, action) => {
-  if (action.type === 'addtocart') {
-    const existingProduct = state.find((item) => item.id === action.payload.id);
+  const newState = [...state];
 
-    if (existingProduct) {
-      const updatedState = state.map((item) => {
-        if (item.id === action.payload.id) {
-          return {
-            ...item,
-            count: item.count + 1,
-            price: item.price + action.payload.price,
-          };
+  switch (action.type) {
+
+    case 'addtocart':
+      const existingProduct = newState.find((item) => {
+        if (item.product.id === action.payload.id) {
+          item.quantity += 1;
         }
-        return item;
+        return item.product.id === action.payload.id
       });
 
-      console.log(updatedState);
-      return updatedState;
-    } else {
-      console.log([...state, action.payload]);
-      return [...state, action.payload];
-    }
-  } else if (action.type === 'removefromcart') {
-    const temp = [...state];
-    temp.splice(action.payload.id, 1);
-    return temp;
-  } else {
-    return state;
+      if(existingProduct) return ([...newState]);
+
+      const newItem = {quantity: 1, product: action.payload};
+      console.log([...newState, newItem]);
+      return [...newState, newItem];
+    case 'updateCart':
+      newState.forEach((item) => {
+        if (item.product.id === action.payload.productId) {
+          if (action.payload.type === 'increase') {
+            item.quantity += 1;
+          } else {
+            if (item.quantity > 1) {
+              item.quantity -= 1;
+            }
+          }
+        }
+      });
+      return ([...newState]);
+    case 'removefromcart':
+      const index = newState.findIndex(item => item.product.id === action.payload);
+      newState.splice(index, 1);
+      return newState;
+    default:
+      return state;
   }
+  
 };
 
 export default reducer;
