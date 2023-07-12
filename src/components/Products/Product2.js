@@ -15,11 +15,11 @@ export default function Product2(props) {
 
   const confirmRemove = () => {
     dispatch(removefromcart(props.id));
-    setShowModal(false);
+    setShowModal(false); 
   };
 
   const cancelRemove = () => {
-    setShowModal(false);
+    setShowModal(false); 
   };
 
   function handleQuantityChange(value) {
