@@ -78,8 +78,6 @@ The Humari Dukaan project utilizes the following technologies and libraries:
 
 ## Contributors
 
-## Contributors
-
 <a href="https://github.com/arpittyagi102">
   <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/94587985?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="120px"/>
 </a>
@@ -97,6 +95,9 @@ The Humari Dukaan project utilizes the following technologies and libraries:
 </a>
 <a href="https://github.com/aasimtaif">
   <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/83891519?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="120px"/>
+</a>
+<a href="https://github.com/MRodriguez-M">
+  <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/41445895?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="120px"/>
 </a>
 <a href="https://github.com/shm-dsgn">
   <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/77527904?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="120px"/>
