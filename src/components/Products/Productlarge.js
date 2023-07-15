@@ -59,7 +59,6 @@ export default function Productlarge() {
                     </div>
                 </div>
             </div>
-          </div>
           <div className="container">
             <h1 className="m-5 mb-2">
               You might be intrested in <i className="bi bi-arrow-right" />
