@@ -6,7 +6,6 @@ import './product.css';
 
 export default function Product2(props) {
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(props.initialQuantity || 1);
   const [showModal, setShowModal] = useState(false);
 
   const handleRemoveFromCart = () => {
@@ -22,14 +21,8 @@ export default function Product2(props) {
     setShowModal(false); 
   };
 
-  function handleQuantityChange(value) {
-    if (value === "increase") {
-      setQuantity(quantity + 1);
-      props.onChange(props.id, quantity + 1);
-    } else if (value === "decrease" && quantity > 1) {
-      setQuantity(quantity - 1);
-      props.onChange(props.id, quantity - 1);
-    }
+  function handleQuantityChange(type) {
+    props.onChange(props.id, type)
   }
 
   return (
@@ -46,7 +39,7 @@ export default function Product2(props) {
             <div class="btn-container">
               <button class="minus-btn _23FHuj" onClick={() => handleQuantityChange("decrease")}>–</button>
                 <div class="input-container">
-                  <input type="text" class="quantity-input _253qQJ" value={quantity} readOnly />
+                  <input type="text" class="quantity-input _253qQJ" value={props.quantity} readOnly />
                 </div>
               <button class="plus-btn _23FHuj" onClick={() => handleQuantityChange("increase")}>+</button>
             </div>

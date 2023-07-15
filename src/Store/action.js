@@ -6,6 +6,15 @@ const addtocart = (data) => {
       });
     };
   };
+
+const updateCart = (data) => {
+  return (dispatch) => {
+    dispatch({
+      type: 'updateCart',
+      payload: data
+    });
+  };
+};
   
   const removefromcart = (itemId) => {
     return (dispatch) => {
@@ -16,4 +25,4 @@ const addtocart = (data) => {
     };
   };
   
-  export { addtocart, removefromcart };
+  export { addtocart, updateCart, removefromcart };
