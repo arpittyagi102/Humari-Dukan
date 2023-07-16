@@ -19,8 +19,6 @@ export default function Allproducts({ data }) {
     }
   }
 
-  console.log(data);
-
   // Handle sorting option change
   function handleSortOptionChange(event) {
     setSortingOption(event.target.value);
