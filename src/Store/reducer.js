@@ -16,7 +16,7 @@ const reducer = (state = initialState, action) => {
       if(existingProduct) return ([...newState]);
 
       const newItem = {quantity: 1, product: action.payload};
-      console.log([...newState, newItem]);
+      console.log([...newState, newItem],'addtoCart')
       return [...newState, newItem];
     case 'updateCart':
       newState.forEach((item) => {
@@ -33,6 +33,7 @@ const reducer = (state = initialState, action) => {
       return ([...newState]);
     case 'removefromcart':
       const index = newState.findIndex(item => item.product.id === action.payload);
+      console.log(index,'remove')
       newState.splice(index, 1);
       return newState;
     default:
