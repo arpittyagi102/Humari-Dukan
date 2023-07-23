@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import Product from './Product';
 
 export default function Allproducts({ data }) {
@@ -26,15 +26,9 @@ export default function Allproducts({ data }) {
 
   const sortedData = [...data].sort(sortProducts); // Create a copy of data to avoid mutation
 
-  /* const [filtereddata, updatefiltereddata] = useState(Productdata);
-
-  useEffect(() => {
-    const NewData = Productdata.filter(product => product.title.toLowerCase().includes(search.toLowerCase()));
-    updatefiltereddata(NewData);
-  }, [search]) */
   return (
     <>
-      <div className="container mt-4">
+      <div className="container-fluid mt-4 m-auto">
         <div style={{ textAlign: 'center' }}>
           {/* Sorting dropdown */}
           <select value={sortingOption} onChange={handleSortOptionChange}>
@@ -45,7 +39,7 @@ export default function Allproducts({ data }) {
             <option value="ratings-descending">Ratings Descending</option>
           </select>
         </div>
-        <div className="product-outr d-flex flex-wrap justify-content-center">
+        <div className="card mt-4">
           {sortedData.map((product) => (
             <Product
               key={product.key}
