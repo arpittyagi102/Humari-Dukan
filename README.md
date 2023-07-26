@@ -13,7 +13,7 @@ Humari Dukaan is a fully functional e-commerce website built using React.js, Red
 - [License](#license)
 
 ## Features
-
+ 
 ### 1. Image Carousel
 
 Humari Dukaan showcases a visually appealing image carousel on the homepage, allowing users to view featured products or promotions in an interactive and engaging manner.
@@ -129,6 +129,7 @@ Contributions to Humari Dukaan are welcome! If you would like to contribute to t
 3. Make your changes and commit them to your branch.
 4. Push your changes to your forked repository.
 5. Submit a pull request explaining your changes and their purpose.
+6. Please give this repository a star 🌟
 
 ## License
 
