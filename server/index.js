@@ -23,7 +23,7 @@ dotenv.config();
 
 
 // connecting mongoose
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect(process.env.MONGO_URI, {
     useUnifiedTopology: true,
 })
     .then(console.log("Connected to mongoDB..."))
