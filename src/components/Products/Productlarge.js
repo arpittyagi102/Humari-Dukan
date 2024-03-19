@@ -61,7 +61,7 @@ export default function Productlarge() {
               </span>
             </p>
             <p className="text-primary mb-3">Free Delivery</p>
-            <p className="text-white">{state.description}</p>
+            <p>{state.description}</p>
             <div className="action-buttons mt-4">
               {listOfAddedProduct.length > 0 &&
               listOfAddedProduct.find(
@@ -73,7 +73,7 @@ export default function Productlarge() {
                 />
               ) : (
                 <button
-                  className="btn btn-outline-primary me-2 btn-lg"
+                  className="btn btn-primary btn-lg"
                   onClick={() => handleaddtocart()}
                 >
                   Add to Cart
